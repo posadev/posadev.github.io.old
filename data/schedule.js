@@ -117,8 +117,8 @@ export default [{
 }, {
     key: 'talk-11',
     hour: '5:45pm',
-    title: '5 Pláticas para un javascript muy navideño',
-    speaker: 'Ruben Beltran',
+    title: 'Mi viejo JS ya no es lo que era',
+    speaker: 'Toily',
     community: GDLJS,
     type: TALK,
     room: ROOM1
