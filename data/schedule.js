@@ -1,6 +1,16 @@
 import {
-  JAVA_USER_GROUP,
-  GDLJS
+  JUG,
+  GDLJS,
+  KUG,
+  J4G,
+  WORDPRESS_GDL,
+  GDL_CONNECT,
+  JENKINS,
+  GDG_ANDROID,
+  DEVOPS,
+  CENTRAAL,
+  SCALABLE,
+  ACADEMY 
 } from './communities';
 
 import { TALK, WORKSHOP } from './talkTypes';
@@ -11,7 +21,7 @@ export default [
     hour: '1:30pm',
     title: 'Realizando pruebas con Spock',
     speaker: 'Andres Almiray',
-    community: JAVA_USER_GROUP,
+    community: JUG,
     type: TALK
   }
 ];
