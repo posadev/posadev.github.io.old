@@ -69,8 +69,8 @@ export default [{
 }, {
     key: 'talk-6',
     hour: '3:00pm',
-    title: 'Bienvenido al mundo multiplataforma dotnet',
-    speaker: 'Oscar Legorreta',
+    title: 'Ajax Reversing con PostgreSQL  + .Net + Php',
+    speaker: 'Luis Herber',
     community: GDL_CONNECT,
     type: TALK,
     room: ROOM2
