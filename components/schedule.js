@@ -2,20 +2,19 @@ import React from 'react';
 import { Table } from 'antd';
 import schedule from '../data/schedule';
 
-const basicSorter = (a,b) => a - b;
+const hourToNumber = (hour) => Number(hour.replace(':', '').replace(/(am|pm)/, ''));
 
 const columns = [
   {
     title: 'Hora',
     dataIndex: 'hour',
     key: 'hour',
-    sorter: basicSorter
+    sorter: (a, b) => hourToNumber(a.hour) - hourToNumber(b.hour)
   },
   {
     title: 'Título',
     dataIndex: 'title',
     key: 'title',
-    sorter: basicSorter
   },
   {
     title: "Speaker",
@@ -25,14 +24,12 @@ const columns = [
   {
     title: "Comunidad",
     dataIndex: 'community',
-    key: 'community',
-    sorter: basicSorter
+    key: 'community'
   },
   {
     title: "Tipo",
     dataIndex: 'type',
-    key: 'type',
-    sorter: basicSorter
+    key: 'type'
   }
 ];
 
