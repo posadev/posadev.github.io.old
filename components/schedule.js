@@ -38,6 +38,6 @@ const columns = [
 
 export default function() {
   return (
-    <Table columns={columns} dataSource={schedule}/>
+    <Table columns={columns} dataSource={schedule} pagination={false}/>
   )
 };
