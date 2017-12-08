@@ -35,6 +35,6 @@
     "lint": "eslint --ext .js,.jsx src/",
     "start": "dora --plugins webpack",
     "test": "atool-test-mocha ./**/__tests__/*-test.js",
-    "release": "npm run build && cp index.html dist && git add ./dist/* && git commit -m Create release files' && git subtree split --prefix dist -b"
+    "release": "npm run build && cp index.html dist && git add ./dist/* && git commit -m 'Create release files' && git subtree split --prefix dist -b master"
   }
 }
