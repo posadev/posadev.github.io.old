@@ -1,8 +1,11 @@
 import React from 'react';
 import { Table } from 'antd';
 import schedule from '../data/schedule';
+import communities from '../data/communities';
+import talkTypes from '../data/talkTypes';
 
 const hourToNumber = (hour) => Number(hour.replace(':', '').replace(/(am|pm)/, ''));
+const basicFilter = (key) => (value, record) => record[key].indexOf(value) === 0;
 
 const columns = [
   {
@@ -24,12 +27,22 @@ const columns = [
   {
     title: "Comunidad",
     dataIndex: 'community',
-    key: 'community'
+    key: 'community',
+    filters: Object.values(communities).map((community) => ({
+      text: community,
+      value: community
+    })),
+    onFilter: basicFilter('community')
   },
   {
     title: "Tipo",
     dataIndex: 'type',
-    key: 'type'
+    key: 'type',
+    filters: Object.values(talkTypes).map((type) => ({
+      text: type,
+      value: type
+    })),
+    onFilter: basicFilter('type')
   }
 ];
 
