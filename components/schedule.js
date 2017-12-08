@@ -1,8 +1,6 @@
 import React from 'react';
 import { Table } from 'antd';
-import schedule from '../data/schedule';
-import communities from '../data/communities';
-import talkTypes from '../data/talkTypes';
+import { schedule, communities, talkTypes, rooms } from '../data' ;
 
 const hourToNumber = (hour) => Number(hour.replace(':', '').replace(/(am|pm)/, ''));
 const basicFilter = (key) => (value, record) => record[key].indexOf(value) === 0;
@@ -43,6 +41,16 @@ const columns = [
       value: type
     })),
     onFilter: basicFilter('type')
+  },
+  {
+    title: "Sala",
+    dataIndex: 'room',
+    key: 'room',
+    filters: Object.values(rooms).map((room) => ({
+      text: room,
+      value: room
+    })),
+    onFilter: basicFilter('room')
   }
 ];
 
